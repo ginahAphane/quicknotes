@@ -1,75 +1,69 @@
 <!DOCTYPE html>
- <html>
-    <head>
-        <title>About - QuickNotes  </title>
-         
-    </head>
-    <body>
-        <header>
-        <h1>QuickNotes</h1>
-         <p>QuickNotes helps you capture ideas fast.</p>
-         <nav>
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          </nav>
-          </header>
-          <main>
-            <h2>About QuickNotes</h2>
-              <p>QuickNotes allows you to create, edit, and organize your notes efficiently.</p>
-             <h3>How to use  QuickNotes</h3>
-                <ol>
-                     <li>Open the app and click "New Note" to create a note.</li>
-                     <li>Type your content and click "Save" to store it.</li>
-                     <li>Use the search bar to find notes quickly.</li>
-                </ol>
-               <section>
-                  <h3>Features</h3>
-                  <ul>
-                     <li>Fast note creation </li>
-                     <li>Easy search and flitering.</li>
-                     <li>Works offline.</li>
-                     <li>Clean and simple design</li>       
-                  </ul>
-                </section>
-                 <section>
-                    <h3>Keyboard Shortcuts</h3>
-                    <table border="1">
-                        <thread>
-                            <tr>
-                                <th>Shortcut</th>
-                                <th>Action</th>
-                            </tr>
-                            <tbody>
-                                <tr>
-                                    <td>Ctrl + N</td>
-                                    <td>Create a new note</td>
-                                </tr>
-                                <tr>
-                                    <td>Ctrl + S</td>
-                                    <td>Save the current note</td>
-                                </tr>
-                                <tr>
-                                    <td>Ctrl + F</td>
-                                    <td>Search notes</td>
-                                </tr>
-                            </tbody>
-                        </thread>
-                    </table>
-                </section>
-                  <section>
-                    <h3>Send Feedback</h3>
-                    <form>
-              <label for ="name">Name:</label>
-              <input type="text" id="name" name="name" required><br><br>
-              <label for="email">Email:</label> 
-                <input type="email" id="email" name="email" required><br><br>
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
-                <input type="submit" value="Submit">
-            </form>
-          </main>
-    <footer>
-        <p>&copy; 2026 QuickNotes</p>
-          </footer>
-    </body>
- </html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickNotes - About</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>About QuickNotes</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>About QuickNotes</h2>
+      <p>QuickNotes is a simple note-taking app designed for speed and clarity.</p>
+    </section>
+    <section>
+      <h2>How to Use</h2>
+      <ol>
+        <li>Open QuickNotes</li>
+        <li>Click New Note</li>
+        <li>Type and save automatically</li>
+      </ol>
+    </section>
+    <section>
+      <h2>Features</h2>
+      <ul class="features">
+        <li>Fast note taking</li>
+        <li>Organize with tags</li>
+        <li>Search instantly</li>
+        <li>Works offline</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Comparison</h2>
+      <table>
+        <tr><th>Feature</th><th>QuickNotes</th><th>Others</th></tr>
+        <tr><td>Speed</td><td>Very Fast</td><td>Slow</td></tr>
+        <tr><td>Offline</td><td>Yes</td><td>No</td></tr>
+        <tr><td>Free</td><td>Yes</td><td>Limited</td></tr>
+      </table>
+    </section>
+    <section>
+      <h2>Feedback</h2>
+      <form>
+        <label>Name: <input type="text" required></label>
+        <label>Email: <input type="email" required></label>
+        <label>Rating: 
+          <select>
+            <option>Excellent</option>
+            <option>Good</option>
+            <option>Needs Work</option>
+          </select>
+        </label>
+        <label>Message: <textarea rows="4"></textarea></label>
+        <button type="submit">Submit Feedback</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2026 QuickNotes by Ginah</p>
+  </footer>
+</body>
+</html>

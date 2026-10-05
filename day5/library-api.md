@@ -1,48 +1,48 @@
-# Library Books REST API
+# Library API - Books Resource
 
-Base URL: /api
+Base URL: `/api`
 
-### 1. List All Books
+## Endpoints
+
+### 1. List Books
 - **Method:** GET
 - **Path:** /books
-- **Description:** Retrieve a list of all books
-- **Example Response (200 OK):**
-[{"id":1,"title":"Things Fall Apart","author":"Chinua Achebe"}]
+- **Description:** Get all books
+- **Success Code:** 200 OK
 
-### 2. List Books by Author
-- **Method:** GET
-- **Path:** /books?author={authorName}
-- **Description:** Filter books by author using query parameter
-- **Example Response (200 OK):**
-[{"id":2,"title":"Born a Crime","author":"Trevor Noah"}]
-
-### 3. Get One Book
+### 2. Get One Book
 - **Method:** GET
 - **Path:** /books/:id
-- **Description:** Retrieve a single book by ID
-- **Example Response (200 OK):**
-{"id":1,"title":"Things Fall Apart","author":"Chinua Achebe"}
+- **Description:** Get a single book by ID
+- **Success Code:** 200 OK
 
-### 4. Create a New Book
+### 3. Create Book
 - **Method:** POST
 - **Path:** /books
-- **Description:** Add a new book
-- **Example Request Body:**
-{"title":"The Alchemist","author":"Paulo Coelho","year":1988}
-- **Example Response (201 Created):**
-{"id":3,"title":"The Alchemist","author":"Paulo Coelho"}
+- **Description:** Create a new book
+- **Request Body:** { "title": "1984", "author": "George Orwell", "year": 1949 }
+- **Success Code:** 201 Created
 
-### 5. Update a Book
+### 4. Update Book
 - **Method:** PUT
 - **Path:** /books/:id
-- **Description:** Update existing book details
-- **Example Request Body:**
-{"title":"Things Fall Apart","available":false}
-- **Example Response (200 OK):**
-{"id":1,"title":"Things Fall Apart","available":false}
+- **Description:** Update an existing book
+- **Request Body:** { "title": "Updated Title" }
+- **Success Code:** 200 OK
 
-### 6. Delete a Book
+### 5. Delete Book
 - **Method:** DELETE
 - **Path:** /books/:id
-- **Description:** Remove a book by ID
-- **Example Response (204 No Content):** No body
+- **Description:** Delete a book
+- **Success Code:** 204 No Content
+
+### 6. List Books by Author
+- **Method:** GET
+- **Path:** /books?author=George Orwell
+- **Description:** List books filtered by author query parameter
+- **Success Code:** 200 OK
+
+## Error Codes
+
+- **400 Bad Request** - Example: { "error": "Missing required field: title" }
+- **404 Not Found** - Example: { "error": "Book with id 99 not found" }
